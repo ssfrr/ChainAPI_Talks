@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Spencer Russell" />
+  <meta name="dcterms.date" content="2014-04-25" />
+  <title>Chain API</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="custom.css"/>
+  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Chain API</h1>
+    <h2 class="author">Spencer Russell</h2>
+    <h3 class="date">2014-04-25</h3>
+</section>
+
+<section id="sensor-architecture" class="slide level2">
+<h1>Sensor Architecture</h1>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope1.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope2.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope3.svg" />
+</figure>
+</section>
+<section id="project-scope" class="slide level2">
+<h1>Project Scope</h1>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope3.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope4.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope5.svg" />
+</figure>
+<aside class="notes">
+<ul>
+<li>not about implementation specifics</li>
+<li>exploring API design</li>
+<li>tying together existing standards</li>
+</ul>
+</aside>
+</section>
+<section id="just-json" class="slide level2">
+<h1>Just JSON</h1>
+<aside class="notes">
+<ul>
+<li>based on json+hal</li>
+<li>minimum valid json+hal document is...</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<pre><code>{}</code></pre>
+</section>
+<section class="slide level2">
+
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;
+}</code></pre>
+</section>
+<section id="links" class="slide level2">
+<h1>Links</h1>
+<aside class="notes">
+<ul>
+<li>Hypermedia</li>
+<li>Built on json+hal</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="resource_relations.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;
+}</code></pre>
+<aside class="notes">
+just a piece of information. It looks so lonely.
+</aside>
+</section>
+<section class="slide level2">
+
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;
+  &quot;_links&quot;: {
+    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5&quot;
+    },
+    &quot;siteSummary&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5/summary&quot;,
+      &quot;title&quot;: &quot;Summary&quot;
+    },
+    &quot;devices&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/devices/?site_id=5&quot;,
+      &quot;title&quot;: &quot;Devices&quot;
+    }
+  }
+}</code></pre>
+<aside class="notes">
+that wasn't so hard, not too much extra complexity
+</aside>
+</section>
+<section class="slide level2">
+
+<div class="dim">
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;</code></pre>
+</div>
+<pre><code>  &quot;_links&quot;: {</code></pre>
+<div class="dim">
+<pre><code>    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5&quot;
+    },
+    &quot;siteSummary&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5/summary&quot;,
+      &quot;title&quot;: &quot;Summary&quot;
+    },
+    &quot;devices&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/devices/?site_id=5&quot;,
+      &quot;title&quot;: &quot;Devices&quot;
+    }</code></pre>
+</div>
+<pre><code>  }</code></pre>
+<div class="dim">
+<pre><code>}</code></pre>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="dim">
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;
+  &quot;_links&quot;: {</code></pre>
+</div>
+<pre><code>    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5&quot;
+    },</code></pre>
+<div class="dim">
+<pre><code>    &quot;siteSummary&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5/summary&quot;,
+      &quot;title&quot;: &quot;Summary&quot;
+    },
+    &quot;devices&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/devices/?site_id=5&quot;,
+      &quot;title&quot;: &quot;Devices&quot;
+    }
+  }
+}</code></pre>
+</div>
+<aside class="notes">
+Each link has at least a &quot;href&quot; field
+</aside>
+</section>
+<section class="slide level2">
+
+<div class="dim">
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;
+  &quot;_links&quot;: {
+    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5&quot;
+    },</code></pre>
+</div>
+<pre><code>    &quot;siteSummary&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5/summary&quot;,
+      &quot;title&quot;: &quot;Summary&quot;
+    },</code></pre>
+<div class="dim">
+<pre><code>    &quot;devices&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/devices/?site_id=5&quot;,
+      &quot;title&quot;: &quot;Devices&quot;
+    }
+  }
+}</code></pre>
+</div>
+<aside class="notes">
+most linke have a &quot;title&quot; field for user display NOTE: the siteSummary view is probably going to change soon.
+</aside>
+</section>
+<section class="slide level2">
+
+<div class="dim">
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;
+  &quot;_links&quot;: {
+    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5&quot;
+    },
+    &quot;siteSummary&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5/summary&quot;,
+      &quot;title&quot;: &quot;Summary&quot;
+    },</code></pre>
+</div>
+<pre><code>    &quot;devices&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/devices/?site_id=5&quot;,
+      &quot;title&quot;: &quot;Devices&quot;
+    }</code></pre>
+<div class="dim">
+<pre><code>  }
+}</code></pre>
+</div>
+<aside class="notes">
+also talk about <code>_embedded</code> fields for caching here.
+</aside>
+</section>
+<section class="slide level2">
+
+<div class="dim">
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;
+  &quot;_links&quot;: {
+    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5&quot;
+    },</code></pre>
+</div>
+<pre><code>    &quot;curies&quot;: [
+      {
+        &quot;href&quot;: &quot;http://chain-api.media.mit.edu/rels/{rel}&quot;,
+        &quot;name&quot;: &quot;ch&quot;,
+        &quot;templated&quot;: true
+      }
+    ],
+    &quot;ch:siteSummary&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5/summary&quot;,
+      &quot;title&quot;: &quot;Summary&quot;
+    },</code></pre>
+<div class="dim">
+<pre><code>    &quot;ch:devices&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/devices/?site_id=5&quot;,
+      &quot;title&quot;: &quot;Devices&quot;
+    }
+  }
+}</code></pre>
+</div>
+</section>
+<section id="streaming" class="slide level2">
+<h1>Streaming</h1>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="streaming.svg" />
+</figure>
+<aside class="notes">
+So how does the client discover when a stream is available and how to connect?
+</aside>
+</section>
+<section class="slide level2">
+
+<div class="dim">
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;
+  &quot;_links&quot;: {
+    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5&quot;
+    },
+    &quot;ch:siteSummary&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5/summary&quot;,
+      &quot;title&quot;: &quot;Summary&quot;
+    },
+    &quot;ch:devices&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/devices/?site_id=5&quot;,
+      &quot;title&quot;: &quot;Devices&quot;
+    },</code></pre>
+</div>
+<pre><code>    &quot;ch:websocketStream&quot;: {
+      &quot;href&quot;: &quot;ws://chain-api.media.mit.edu/ws/site-5&quot;,
+      &quot;title&quot;: &quot;Websocket Stream&quot;
+    }</code></pre>
+<div class="dim">
+<pre><code>  }
+}</code></pre>
+</div>
+<aside class="notes">
+<ul>
+<li>we need some more documentation on the data that comes back over the stream.</li>
+<li>sensor data has a &quot;ch:sensor&quot; rel that points to the sensor the data came from.</li>
+<li>typically clients will start with using the HTTP API, to get current state, then switch to the stream for updates</li>
+</ul>
+</aside>
+</section>
+<section id="discoverable" class="slide level2">
+<h1>Discoverable</h1>
+<aside class="notes">
+<ul>
+<li>Hypermedia</li>
+<li>Built on json+hal</li>
+<li>Links represent possible actions the client can take
+<ul>
+<li>Creating a device</li>
+<li>Sending a command</li>
+</ul></li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<div class="dim">
+<pre><code>{
+  &quot;name&quot;: &quot;MIT Media Lab&quot;
+  &quot;_links&quot;: {
+    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5&quot;
+    },
+    &quot;devices&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/devices/?site_id=5&quot;,
+      &quot;title&quot;: &quot;Devices&quot;
+    }</code></pre>
+</div>
+<pre><code>    &quot;editForm&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/5/edit&quot;,
+      &quot;title&quot;: &quot;Edit Site&quot;
+    }</code></pre>
+<div class="dim">
+<pre><code>  }
+}</code></pre>
+</div>
+<aside class="notes">
+<ul>
+<li>clients that aren't allowed to edit data just don't get an editForm link</li>
+<li>affordances are described to the client by the server via links</li>
+</ul>
+</aside>
+</section>
+<section id="decentralized" class="slide level2">
+<h1>Decentralized</h1>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="server_relations.svg" />
+</figure>
+<aside class="notes">
+<ul>
+<li>Modeled after the Web</li>
+<li>Seamlessly cross servers</li>
+<li>allow flexibility for implementations (though there's a balance)</li>
+<li>people can implement their own servers or use this implementation</li>
+</ul>
+</aside>
+</section>
+<section id="crawlable" class="slide level2">
+<h1>Crawlable</h1>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="crawling.svg" />
+</figure>
+<aside class="notes">
+<ul>
+<li>moving forwards (future work)</li>
+<li>Leverage Search Engines</li>
+<li>Links represent relationships</li>
+<li>Search engines already taking advantage of semantic links in HTML (microdata)</li>
+</ul>
+</aside>
+</section>
+<section id="open-source" class="slide level2">
+<h1>Open Source</h1>
+<p><a href="https://github.com/ssfrr/chain-api">https://github.com/ssfrr/chain-api</a> <img src="github_screen.png" /></p>
+</section>
+<section id="live" class="slide level2">
+<h1>Live</h1>
+<p><a href="http://chain-api.media.mit.edu">http://chain-api.media.mit.edu</a> <img src="chain_screen.png" /></p>
+<aside class="notes">
+<ul>
+<li>GET request from a browser will provide this interface</li>
+<li>GET request from an API client will provide...</li>
+</ul>
+</aside>
+</section>
+<section id="getting-started" class="slide level2">
+<h1>Getting Started</h1>
+</section>
+<section class="slide level2">
+
+<pre><code>{
+  &quot;_links&quot;: {
+    &quot;curies&quot;: [
+      {
+        &quot;href&quot;: &quot;http://chain-api.media.mit.edu/rels/{rel}&quot;,
+        &quot;name&quot;: &quot;ch&quot;,
+        &quot;templated&quot;: true
+      }
+    ],
+    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/&quot;
+    },
+    &quot;ch:sites&quot;: {
+      &quot;href&quot;: &quot;http://chain-api.media.mit.edu/sites/&quot;,
+      &quot;title&quot;: &quot;Sites&quot;
+    }
+  }
+}</code></pre>
+</section>
+<section class="slide level2">
+
+<h3 id="live-site">Live Site</h3>
+<p><a href="http://chain-api.media.mit.edu">http://chain-api.media.mit.edu</a></p>
+<h3 id="main-github">Main Github</h3>
+<p><a href="https://github.com/ssfrr/chain-api">https://github.com/ssfrr/chain-api</a></p>
+<h3 id="python-client-library">Python Client Library</h3>
+<p><a href="https://github.com/ssfrr/chainclient.py">https://github.com/ssfrr/chainclient.py</a></p>
+<h3 id="chainapi---osc-bridge">ChainAPI - OSC Bridge</h3>
+<p><a href="https://github.com/ssfrr/chainosc.py">https://github.com/ssfrr/chainosc.py</a></p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: 'sky', // available themes are in /css/theme
+        transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>

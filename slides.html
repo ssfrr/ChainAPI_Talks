@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Spencer Russell" />
+  <meta name="dcterms.date" content="2014-04-23" />
+  <title>Chain API</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="custom.css"/>
+  <link rel="stylesheet" media="print" href="reveal.js/css/print/pdf.css" />
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Chain API</h1>
+    <h2 class="author">Spencer Russell</h2>
+    <h3 class="date">2014-04-23</h3>
+</section>
+
+<section id="sensor-architecture" class="slide level2">
+<h1>Sensor Architecture</h1>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope1.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope2.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope3.svg" />
+</figure>
+</section>
+<section id="project-scope" class="slide level2">
+<h1>Project Scope</h1>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope3.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope4.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope5.svg" />
+</figure>
+<aside class="notes">
+<ul>
+<li>not about implementation specifics</li>
+<li>exploring API design</li>
+<li>tying together existing standards</li>
+</ul>
+</aside>
+</section>
+<section id="link-oriented" class="slide level2">
+<h1>Link Oriented</h1>
+<aside class="notes">
+<ul>
+<li>Hypermedia</li>
+<li>Built on json+hal</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="resource_relations.svg" />
+</figure>
+</section>
+<section id="discoverable" class="slide level2">
+<h1>Discoverable</h1>
+<aside class="notes">
+<ul>
+<li>Links represent possible actions the client can take
+<ul>
+<li>Creating a device</li>
+<li>Sending a command</li>
+</ul></li>
+<li>Hypermedia</li>
+<li>Built on json+hal</li>
+</ul>
+</aside>
+</section>
+<section id="streaming" class="slide level2">
+<h1>Streaming</h1>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="streaming.svg" />
+</figure>
+</section>
+<section id="decentralized" class="slide level2">
+<h1>Decentralized</h1>
+<aside class="notes">
+<ul>
+<li>Modeled after the Web</li>
+<li>Seamlessly cross servers</li>
+<li>allow flexibility for implementations (though there's a balance)</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="server_relations.svg" />
+</figure>
+</section>
+<section id="crawlable" class="slide level2">
+<h1>Crawlable</h1>
+<aside class="notes">
+<ul>
+<li>moving forwards (future work)</li>
+<li>Leverage Search Engines</li>
+<li>Links represent relationships</li>
+<li>Search engines already taking advantage of semantic links in HTML (microdata)</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="crawling.svg" />
+</figure>
+</section>
+<section id="open-source" class="slide level2">
+<h1>Open Source</h1>
+<p><a href="https://github.com/ssfrr/chain-api">https://github.com/ssfrr/chain-api</a> <img src="github_screen.png" /></p>
+</section>
+<section id="live" class="slide level2">
+<h1>Live</h1>
+<p><a href="http://chain-api.media.mit.edu">http://chain-api.media.mit.edu</a> <img src="chain_screen.png" /></p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: 'sky', // available themes are in /css/theme
+        transition: 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>
