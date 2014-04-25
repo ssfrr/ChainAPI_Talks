@@ -4,8 +4,8 @@ default: slides.html workshop_slides.html
 	pandoc -trevealjs -Vtheme=sky -Vtransition=none --template=template.html --css=custom.css --standalone -o$@ $<
 
 reveal.js:
-	git clone https://github.com/hakimel/reveal.js.git
-	cd reveal.js && git checkout 2.6.2
+	git submodule init
+	git submodule update
 
 serve:
 	python -mSimpleHTTPServer 8001

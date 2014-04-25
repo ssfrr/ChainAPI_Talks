@@ -1,5 +1,5 @@
 % Chain API
-% Spencer Russell
+% Spencer Russell; MIT Media Lab
 % 2014-04-25
 
 ---
