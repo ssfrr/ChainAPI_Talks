@@ -77,6 +77,24 @@ Link Oriented
 
 ---
 
+Security
+--------
+
+<div class="notes">
+* brand-new security schemes scare me
+</div>
+
+---
+
+![image from http://www.noip.com/](Heartbleed_Nightmare.jpg)
+
+---
+
+Security
+--------
+
+---
+
 Ontology
 --------
 

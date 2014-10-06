@@ -36,3 +36,7 @@
 #notes {
     width: 800px;
 }
+
+.reveal figcaption {
+    font-size: 0.5em;
+}
