@@ -8,6 +8,11 @@
     padding:0px;
 }
 
+.reveal h1 {
+    font-size: 3.0em;
+    line-height: 1.2em;
+}
+
 .reveal .title {
     font-size: 3.0em;
     line-height: 1.2em;
@@ -26,4 +31,8 @@
 
 .dim {
     opacity: 0.2;
+}
+
+#notes {
+    width: 800px;
 }

@@ -5,6 +5,7 @@
   <meta name="generator" content="pandoc">
   <meta name="author" content="Spencer Russell" />
   <meta name="author" content="MIT Media Lab" />
+  <meta name="author" content="Responsive Environments Group" />
   <meta name="dcterms.date" content="2014-10-06" />
   <title>Chain API</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -27,6 +28,7 @@
     <h1 class="title">Chain API</h1>
     <h2 class="author">Spencer Russell</h2>
     <h2 class="author">MIT Media Lab</h2>
+    <h2 class="author">Responsive Environments Group</h2>
     <h3 class="date">2014-10-06</h3>
 </section>
 
@@ -36,48 +38,8 @@
 <section class="slide level2">
 
 <figure>
-<img src="scope1.svg" />
-</figure>
-</section>
-<section class="slide level2">
-
-<figure>
 <img src="scope2.svg" />
 </figure>
-</section>
-<section class="slide level2">
-
-<figure>
-<img src="scope3.svg" />
-</figure>
-</section>
-<section id="project-scope" class="slide level2">
-<h1>Project Scope</h1>
-</section>
-<section class="slide level2">
-
-<figure>
-<img src="scope3.svg" />
-</figure>
-</section>
-<section class="slide level2">
-
-<figure>
-<img src="scope4.svg" />
-</figure>
-</section>
-<section class="slide level2">
-
-<figure>
-<img src="scope5.svg" />
-</figure>
-<aside class="notes">
-<ul>
-<li>not about implementation specifics</li>
-<li>exploring API design</li>
-<li>tying together existing standards</li>
-</ul>
-</aside>
 </section>
 <section id="just-json" class="slide level2">
 <h1>Just JSON</h1>
@@ -366,40 +328,6 @@ So how does the client discover when a stream is available and how to connect?
 </ul>
 </aside>
 </section>
-<section id="decentralized" class="slide level2">
-<h1>Decentralized</h1>
-</section>
-<section class="slide level2">
-
-<figure>
-<img src="server_relations.svg" />
-</figure>
-<aside class="notes">
-<ul>
-<li>Modeled after the Web</li>
-<li>Seamlessly cross servers</li>
-<li>allow flexibility for implementations (though there's a balance)</li>
-<li>people can implement their own servers or use this implementation</li>
-</ul>
-</aside>
-</section>
-<section id="crawlable" class="slide level2">
-<h1>Crawlable</h1>
-</section>
-<section class="slide level2">
-
-<figure>
-<img src="crawling.svg" />
-</figure>
-<aside class="notes">
-<ul>
-<li>moving forwards (future work)</li>
-<li>Leverage Search Engines</li>
-<li>Links represent relationships</li>
-<li>Search engines already taking advantage of semantic links in HTML (microdata)</li>
-</ul>
-</aside>
-</section>
 <section id="open-source" class="slide level2">
 <h1>Open Source</h1>
 <p><a href="https://github.com/ssfrr/chain-api">https://github.com/ssfrr/chain-api</a> <img src="github_screen.png" /></p>
@@ -419,6 +347,7 @@ So how does the client discover when a stream is available and how to connect?
 </section>
 <section class="slide level2">
 
+<p>GET http://chain-api.media.mit.edu</p>
 <pre><code>{
   &quot;_links&quot;: {
     &quot;curies&quot;: [

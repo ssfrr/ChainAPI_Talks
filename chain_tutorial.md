@@ -1,5 +1,5 @@
 % Chain API
-% Spencer Russell; MIT Media Lab
+% Spencer Russell; MIT Media Lab; Responsive Environments Group
 % 2014-10-06
 
 ---
@@ -8,39 +8,7 @@
 
 ---
 
-![](scope1.svg)
-
----
-
 ![](scope2.svg)
-
----
-
-![](scope3.svg)
-
----
-
-Project Scope
--------------
-
----
-
-![](scope3.svg)
-
----
-
-![](scope4.svg)
-
----
-
-![](scope5.svg)
-
-<div class="notes">
-* not about implementation specifics
-* exploring API design
-* tying together existing standards
-</div>
-
 
 ---
 
@@ -338,38 +306,6 @@ Discoverable
 
 ---
 
-Decentralized
--------------
-
----
-
-![](server_relations.svg)
-
-<div class="notes">
-* Modeled after the Web
-* Seamlessly cross servers
-* allow flexibility for implementations (though there's a balance)
-* people can implement their own servers or use this implementation
-</div>
-
-
----
-
-Crawlable
----------
-
----
-
-![](crawling.svg)
-
-<div class="notes">
-* moving forwards (future work)
-* Leverage Search Engines
-* Links represent relationships
-* Search engines already taking advantage of semantic links in HTML (microdata)
-</div>
-
-
 Open Source
 -----------
 
@@ -392,6 +328,8 @@ Getting Started
 ---------------
 
 ---
+
+GET http://chain-api.media.mit.edu
 
     {
       "_links": {

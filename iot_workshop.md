@@ -77,6 +77,25 @@ Link Oriented
 
 ---
 
+Ontology
+--------
+
+---
+
+![](resource_relations.svg)
+
+<div class="notes">
+* shared vocabulary is necessary for nice querying
+* Probably not necessary to tie in to Upper Ontology
+* Need vocab for
+    * Relation types
+    * data types
+* HAL gives nice way to tie relations to URLs to identify and describe
+* some (esp. search engines) are already using Schema.org data types
+</div>
+
+---
+
 ## Chain API
 
 ---
