@@ -1,3 +1,5 @@
+* ideas from paper to cover
+
 * scope of work
     * not about implementation specifics
     * not about low-power device communication
