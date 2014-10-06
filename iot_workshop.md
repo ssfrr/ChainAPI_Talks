@@ -1,5 +1,5 @@
-% Chain API
-% Spencer Russell; MIT Media Lab
+% Open Standards: Web of Things
+% Spencer Russell; MIT Media Lab; Responsive Environments Group
 % 2014-10-06
 
 ---

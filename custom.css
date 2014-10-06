@@ -8,8 +8,14 @@
     padding:0px;
 }
 
-.reveal h1 {
-    font-size: 3.6em;
+.reveal .title {
+    font-size: 3.0em;
+    line-height: 1.2em;
+}
+
+.reveal .author {
+    font-size: 1.5em;
+    line-height: 0.9em;
 }
 
 .reveal ul {
