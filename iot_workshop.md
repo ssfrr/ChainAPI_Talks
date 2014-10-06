@@ -75,6 +75,15 @@ Link Oriented
 
 ![](search_6.svg)
 
+<div class="notes">
+* and I'm apparently not the only one interested in graphs for the IoT
+</div>
+
+
+---
+
+![](iot2014_banner.png)
+
 ---
 
 Security
