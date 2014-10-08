@@ -34,6 +34,14 @@
 
 <section id="vision" class="slide level2">
 <h1>Vision</h1>
+<aside class="notes">
+<ul>
+<li>global scale</li>
+<li>not meant to replace low-power protocols</li>
+<li>build on web technologies</li>
+<li>leverage existing infrastructure and talent</li>
+</ul>
+</aside>
 </section>
 <section class="slide level2">
 
@@ -61,15 +69,23 @@
 </section>
 <section class="slide level2">
 
-<figure>
 <img src="vision_5.svg" />
-</figure>
+<aside class="notes">
+<ul>
+<li>so this is in many ways what is common now</li>
+<li>app servers not speaking same language</li>
+<li>no standard way for them to connect to each other</li>
+</ul>
+</aside>
 </section>
 <section class="slide level2">
 
-<figure>
 <img src="vision_6.svg" />
-</figure>
+<aside class="notes">
+<ul>
+<li>layered architecture, less scaling on massive connection loads and keepalive</li>
+</ul>
+</aside>
 </section>
 <section id="link-oriented" class="slide level2">
 <h1>Link Oriented</h1>
@@ -80,34 +96,47 @@
 <li>Creating a device</li>
 <li>Sending a command</li>
 </ul></li>
-<li>Hypermedia</li>
+<li>Hypermedia, like the web, MESSY</li>
 <li>Built on json+hal</li>
 </ul>
 </aside>
 </section>
 <section class="slide level2">
 
-<figure>
 <img src="resource_relations.svg" />
-</figure>
+<aside class="notes">
+<ul>
+<li>Lets take a look back at our high-level architecture</li>
+</ul>
+</aside>
 </section>
 <section class="slide level2">
 
-<figure>
 <img src="vision_6.svg" />
-</figure>
+<aside class="notes">
+<ul>
+<li>And now lets focus on the application servers</li>
+</ul>
+</aside>
 </section>
 <section class="slide level2">
 
-<figure>
 <img src="search_1.svg" />
-</figure>
+<aside class="notes">
+<ul>
+<li>But say we have a lot more application servers</li>
+</ul>
+</aside>
 </section>
 <section class="slide level2">
 
-<figure>
 <img src="search_2.svg" />
-</figure>
+<aside class="notes">
+<ul>
+<li>so now we have something that looks a lot like the early-90s web</li>
+<li>now what came along in 1994 to help consumers find what they wanted</li>
+</ul>
+</aside>
 </section>
 <section class="slide level2">
 
@@ -123,9 +152,12 @@
 </section>
 <section class="slide level2">
 
-<figure>
 <img src="search_5.svg" />
-</figure>
+<aside class="notes">
+<ul>
+<li>the web is a substrate for innovation, an ecosystem we can grow new services on top of</li>
+</ul>
+</aside>
 </section>
 <section class="slide level2">
 
@@ -148,6 +180,7 @@
 <h1>Security</h1>
 <aside class="notes">
 <ul>
+<li>admittedly security isn't a focus of my research</li>
 <li>brand-new security schemes scare me</li>
 </ul>
 </aside>
@@ -157,9 +190,6 @@
 <figure>
 <img src="Heartbleed_Nightmare.jpg" alt="image from http://www.noip.com/" /><figcaption>image from http://www.noip.com/</figcaption>
 </figure>
-</section>
-<section id="security-1" class="slide level2">
-<h1>Security</h1>
 </section>
 <section id="ontology" class="slide level2">
 <h1>Ontology</h1>
@@ -173,11 +203,7 @@
 <ul>
 <li>shared vocabulary is necessary for nice querying</li>
 <li>Probably not necessary to tie in to Upper Ontology</li>
-<li>Need vocab for
-<ul>
-<li>Relation types</li>
-<li>data types</li>
-</ul></li>
+<li>Need vocab for relation types, data types</li>
 <li>HAL gives nice way to tie relations to URLs to identify and describe</li>
 <li>some (esp. search engines) are already using Schema.org data types</li>
 </ul>
@@ -191,6 +217,15 @@
 <figure>
 <img src="scope2.svg" />
 </figure>
+<aside class="notes">
+<ul>
+<li>366 devices in the system using a variety of protocols</li>
+<li>1121 separate sensors</li>
+<li>Over 100,000,000 measurements over about 6 months</li>
+<li>at least 6 applications (2x unity, 2x glass, javascript web, SOOFA)</li>
+<li>common protocols are a lot easier in unique or niche environments</li>
+</ul>
+</aside>
 </section>
 <section id="streaming" class="slide level2">
 <h1>Streaming</h1>
