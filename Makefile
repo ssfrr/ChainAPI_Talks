@@ -1,4 +1,4 @@
-default: iot_workshop.html chain_tutorial.html
+default: index.html
 
 %.html: %.md reveal.js Makefile custom.css template.html
 	pandoc -trevealjs -Vtheme=sky -Vtransition=none --template=template.html --css=custom.css --standalone -o$@ $<

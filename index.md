@@ -1,6 +1,6 @@
-% Open Standards: Web of Things
-% Spencer Russell; MIT Media Lab; Responsive Environments Group
-% 2014-10-06
+% ChainAPI
+% Spencer Russell; Responsive Environments Group
+% 2014-10-23
 
 ---
 
@@ -105,15 +105,6 @@ Link Oriented
 ---
 
 ![](search_6.svg)
-
-<div class="notes">
-* and I'm apparently not the only one interested in graphs for the IoT
-</div>
-
-
----
-
-![](iot2014_banner.png)
 
 ---
 
