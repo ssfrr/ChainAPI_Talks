@@ -1,6 +1,6 @@
 ## Hypermedia APIs for Sensor Data
 ### A pragmatic approach to<br>the Web of Things
-#### 2014-10-23
+#### Mobiquitous 2014
 
 ---
 
