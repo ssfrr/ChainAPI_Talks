@@ -3,10 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Spencer Russell" />
-  <meta name="author" content="Responsive Environments Group" />
-  <meta name="dcterms.date" content="2014-10-23" />
-  <title>ChainAPI</title>
+  <title></title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -23,13 +20,17 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
-    <h1 class="title">ChainAPI</h1>
-    <h2 class="author">Spencer Russell</h2>
-    <h2 class="author">Responsive Environments Group</h2>
-    <h3 class="date">2014-10-23</h3>
-</section>
 
+<section id="hypermedia-apis-for-sensor-data" class="slide level2">
+<h1>Hypermedia APIs for Sensor Data</h1>
+<h3 id="a-pragmatic-approach-tothe-web-of-things">A pragmatic approach to<br>the Web of Things</h3>
+<h4 id="section">2014-10-23</h4>
+</section>
+<section id="spencer-russelljoe-paradiso" class="slide level2">
+<h1>Spencer Russell<br>Joe Paradiso</h1>
+<h3 id="mit-media-lab">MIT Media Lab</h3>
+<h3 id="responsive-environments-group">Responsive Environments Group</h3>
+</section>
 <section id="vision" class="slide level2">
 <h1>Vision</h1>
 <aside class="notes">
@@ -82,6 +83,126 @@
 <aside class="notes">
 <ul>
 <li>layered architecture, less scaling on massive connection loads and keepalive</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture">Layered Architecture</h3>
+<h3 id="hyperlinks">Hyperlinks</h3>
+<h3 id="shared-vocabularies">Shared Vocabularies</h3>
+<h3 id="familiar-standards-minimal-tooling">Familiar Standards, Minimal Tooling</h3>
+<h3 id="semantic-relations">Semantic Relations</h3>
+<h3 id="pubsub">Pub/Sub</h3>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-1">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-1" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-1" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-1" class="dim">Shared Vocabularies</h3>
+<h3 id="familiar-standards-minimal-tooling-1" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="semantic-relations-1" class="dim">Semantic Relations</h3>
+<h3 id="pubsub-1" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>Assume a plurality of low-level device protocols</li>
+<li>abstract them from clients</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-2" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-2">Layered Architecture</h3>
+<h3 id="hyperlinks-2" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-2" class="dim">Shared Vocabularies</h3>
+<h3 id="familiar-standards-minimal-tooling-2" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="semantic-relations-2" class="dim">Semantic Relations</h3>
+<h3 id="pubsub-2" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>allowing intermediaries</li>
+<li>handle caching, authentication, and encryption</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-3" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-3" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-3">Hyperlinks</h3>
+<h3 id="shared-vocabularies-3" class="dim">Shared Vocabularies</h3>
+<h3 id="familiar-standards-minimal-tooling-3" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="semantic-relations-3" class="dim">Semantic Relations</h3>
+<h3 id="pubsub-3" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>present resource relations and client affordances</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-4" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-4" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-4" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-4">Shared Vocabularies</h3>
+<h3 id="familiar-standards-minimal-tooling-4" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="semantic-relations-4" class="dim">Semantic Relations</h3>
+<h3 id="pubsub-4" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>Support interoperability via shared vocabularies</li>
+<li>terms identified with URIs</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-5" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-5" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-5" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-5" class="dim">Shared Vocabularies</h3>
+<h3 id="familiar-standards-minimal-tooling-5">Familiar Standards, Minimal Tooling</h3>
+<h3 id="semantic-relations-5" class="dim">Semantic Relations</h3>
+<h3 id="pubsub-5" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>use familiar standards (HTTP, JSON, and WebSockets)</li>
+<li>no specialized tooling or libraries</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-6" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-6" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-6" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-6" class="dim">Shared Vocabularies</h3>
+<h3 id="familiar-standards-minimal-tooling-6" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="semantic-relations-6">Semantic Relations</h3>
+<h3 id="pubsub-6" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>Provide semantic relationships</li>
+<li>don't require full Semantic Web buy-in from developers</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-7" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-7" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-7" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-7" class="dim">Shared Vocabularies</h3>
+<h3 id="familiar-standards-minimal-tooling-7" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="semantic-relations-7" class="dim">Semantic Relations</h3>
+<h3 id="pubsub-7">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>allow clients to subscribe to push updates</li>
 </ul>
 </aside>
 </section>
@@ -242,6 +363,7 @@
       // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        width: 1024,
         controls: true,
         progress: true,
         history: true,

@@ -1,6 +1,12 @@
-% ChainAPI
-% Spencer Russell; Responsive Environments Group
-% 2014-10-23
+## Hypermedia APIs for Sensor Data
+### A pragmatic approach to<br>the Web of Things
+#### 2014-10-23
+
+---
+
+## Spencer Russell<br>Joe Paradiso
+### MIT Media Lab
+### Responsive Environments Group
 
 ---
 
@@ -42,6 +48,119 @@
 ![](vision_6.svg)
 <div class="notes">
 * layered architecture, less scaling on massive connection loads and keepalive
+</div>
+
+---
+
+### Low-Level Protocol Diversity
+### Layered Architecture
+### Hyperlinks
+### Shared Vocabularies
+### Familiar Standards, Minimal Tooling
+### Semantic Relations
+### Pub/Sub
+
+---
+
+### Low-Level Protocol Diversity
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Semantic Relations {class="dim"}
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* Assume a plurality of low-level device protocols
+* abstract them from clients
+</div>
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Semantic Relations {class="dim"}
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* allowing intermediaries
+* handle caching, authentication, and encryption
+</div>
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture {class="dim"}
+### Hyperlinks
+### Shared Vocabularies {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Semantic Relations {class="dim"}
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* present resource relations and client affordances
+</div>
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Semantic Relations {class="dim"}
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* Support interoperability via shared vocabularies
+* terms identified with URIs
+</div>
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Familiar Standards, Minimal Tooling
+### Semantic Relations {class="dim"}
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* use familiar standards (HTTP, JSON, and WebSockets)
+* no specialized tooling or libraries
+</div>
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Semantic Relations
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* Provide semantic relationships
+* don't require full Semantic Web buy-in from developers
+</div>
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Semantic Relations {class="dim"}
+### Pub/Sub
+
+<div class="notes">
+* allow clients to subscribe to push updates
 </div>
 
 ---
