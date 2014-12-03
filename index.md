@@ -10,7 +10,7 @@
 
 ---
 
-## Vision
+## Big Picture
 <div class="notes">
 * global scale
 * not meant to replace low-power protocols
@@ -20,7 +20,54 @@
 
 ---
 
+### Low-Level Protocol Diversity
+### Layered Architecture
+### Hyperlinks
+### Shared Vocabularies
+### Semantic Relations
+### Familiar Standards, Minimal Tooling
+### Pub/Sub
+
+---
+
+### Low-Level Protocol Diversity
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Semantic Relations {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* Assume a plurality of low-level device protocols
+</div>
+
+---
+
 ![](vision_1.svg)
+
+<div class="notes">
+* abstract them from clients
+</div>
+
+---
+
+![](vision_2.svg)
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Semantic Relations {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* allowing intermediaries
+* handle caching, authentication, and encryption
+</div>
 
 ---
 
@@ -41,53 +88,7 @@
 * so this is in many ways what is common now
 * app servers not speaking same language
 * no standard way for them to connect to each other
-</div>
-
----
-
-![](vision_6.svg)
-<div class="notes">
-* layered architecture, less scaling on massive connection loads and keepalive
-</div>
-
----
-
-### Low-Level Protocol Diversity
-### Layered Architecture
-### Hyperlinks
-### Shared Vocabularies
-### Familiar Standards, Minimal Tooling
-### Semantic Relations
-### Pub/Sub
-
----
-
-### Low-Level Protocol Diversity
-### Layered Architecture {class="dim"}
-### Hyperlinks {class="dim"}
-### Shared Vocabularies {class="dim"}
-### Familiar Standards, Minimal Tooling {class="dim"}
-### Semantic Relations {class="dim"}
-### Pub/Sub {class="dim"}
-
-<div class="notes">
-* Assume a plurality of low-level device protocols
-* abstract them from clients
-</div>
-
----
-
-### Low-Level Protocol Diversity {class="dim"}
-### Layered Architecture
-### Hyperlinks {class="dim"}
-### Shared Vocabularies {class="dim"}
-### Familiar Standards, Minimal Tooling {class="dim"}
-### Semantic Relations {class="dim"}
-### Pub/Sub {class="dim"}
-
-<div class="notes">
-* allowing intermediaries
-* handle caching, authentication, and encryption
+* still better because of the layers
 </div>
 
 ---
@@ -96,91 +97,22 @@
 ### Layered Architecture {class="dim"}
 ### Hyperlinks
 ### Shared Vocabularies {class="dim"}
-### Familiar Standards, Minimal Tooling {class="dim"}
 ### Semantic Relations {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
 ### Pub/Sub {class="dim"}
 
 <div class="notes">
-* present resource relations and client affordances
+* present resource relations
+* affordances(creating a device, sending a command)
+* currently using JSON-HAL, but JSON-LD looks nice as well
+* Going to spend a little time here, as it's important!
 </div>
 
 ---
 
-### Low-Level Protocol Diversity {class="dim"}
-### Layered Architecture {class="dim"}
-### Hyperlinks {class="dim"}
-### Shared Vocabularies
-### Familiar Standards, Minimal Tooling {class="dim"}
-### Semantic Relations {class="dim"}
-### Pub/Sub {class="dim"}
-
+![](vision_5.svg)
 <div class="notes">
-* Support interoperability via shared vocabularies
-* terms identified with URIs
-</div>
-
----
-
-### Low-Level Protocol Diversity {class="dim"}
-### Layered Architecture {class="dim"}
-### Hyperlinks {class="dim"}
-### Shared Vocabularies {class="dim"}
-### Familiar Standards, Minimal Tooling
-### Semantic Relations {class="dim"}
-### Pub/Sub {class="dim"}
-
-<div class="notes">
-* use familiar standards (HTTP, JSON, and WebSockets)
-* no specialized tooling or libraries
-</div>
-
----
-
-### Low-Level Protocol Diversity {class="dim"}
-### Layered Architecture {class="dim"}
-### Hyperlinks {class="dim"}
-### Shared Vocabularies {class="dim"}
-### Familiar Standards, Minimal Tooling {class="dim"}
-### Semantic Relations
-### Pub/Sub {class="dim"}
-
-<div class="notes">
-* Provide semantic relationships
-* don't require full Semantic Web buy-in from developers
-</div>
-
----
-
-### Low-Level Protocol Diversity {class="dim"}
-### Layered Architecture {class="dim"}
-### Hyperlinks {class="dim"}
-### Shared Vocabularies {class="dim"}
-### Familiar Standards, Minimal Tooling {class="dim"}
-### Semantic Relations {class="dim"}
-### Pub/Sub
-
-<div class="notes">
-* allow clients to subscribe to push updates
-</div>
-
----
-
-Link Oriented
--------------
-
-<div class="notes">
-* Links represent possible actions the client can take
-    * Creating a device
-    * Sending a command
-* Hypermedia, like the web, MESSY
-* Built on json+hal
-</div>
-
----
-
-![](resource_relations.svg)
-<div class="notes">
-* Lets take a look back at our high-level architecture
+* now with hyperlinks
 </div>
 
 ---
@@ -224,8 +156,156 @@ Link Oriented
 ---
 
 ![](search_6.svg)
+<div class="notes">
+* now that we have all these links, what do they mean?...
+</div>
 
 ---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies
+### Semantic Relations {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* Support interoperability via shared vocabularies
+* specifically focus on vocabulary of relation names and data types
+* terms identified with URIs
+* lightweight to extend
+</div>
+
+---
+
+![](resource_relations.svg)
+
+<div class="notes">
+* Need vocab for relation types, data types
+* HAL gives nice way to tie relations to URLs to identify and describe
+* some (esp. search engines) are already using Schema.org data types
+</div>
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Semantic Relations
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* enabled by hyperlinks and shared vocabulary
+* Provide semantic relationships
+* Probably not necessary to tie in to Upper Ontology
+* don't require full Semantic Web buy-in from developers
+</div>
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Semantic Relations {class="dim"}
+### Familiar Standards, Minimal Tooling
+### Pub/Sub {class="dim"}
+
+<div class="notes">
+* use familiar standards (HTTP, JSON, and WebSockets)
+* no specialized tooling or libraries
+</div>
+
+---
+
+    {
+        "firstName": "Spencer",
+        "lastName": "Russell"
+    }
+
+<div class="notes">
+* raw JSON doesn't give us QUITE enough
+* we still need hyperlinks and shared vocabulary
+</div>
+
+---
+
+    {
+        "_links": {
+            "self": { "href": "/api/user/837" },
+            "address": { "href": "/api/address/938" }
+        },
+        "firstName": "Spencer",
+        "lastName": "Russell"
+    }
+
+<div class="notes">
+* just JSON with links
+* has a mechanism for the relation name to be a URL, but I won't go into it here
+* this gives us everything we need
+</div>
+
+---
+
+### Low-Level Protocol Diversity {class="dim"}
+### Layered Architecture {class="dim"}
+### Hyperlinks {class="dim"}
+### Shared Vocabularies {class="dim"}
+### Semantic Relations {class="dim"}
+### Familiar Standards, Minimal Tooling {class="dim"}
+### Pub/Sub
+
+<div class="notes">
+* allow clients to subscribe to push updates
+</div>
+
+---
+
+![](streaming.svg)
+
+<div class="notes">
+* use links to tell clients when streams are available
+</div>
+
+---
+
+## Implementation
+<div class="notes">
+* reference implementation is in progress, but in use now
+* basically everything except the shared vocabularies
+</div>
+
+
+---
+
+![](scope2.svg)
+
+<div class="notes">
+* 490 devices in the system using a variety of protocols
+* 2257 separate sensors
+* Over 240,000,000 measurements
+* at least 6 applications (2x unity, 2x glass, javascript web, SOOFA)
+* common protocols are a lot easier in unique or niche environments (e.g. Unity)
+</div>
+
+---
+
+Live
+----
+
+[http://chain-api.media.mit.edu](http://chain-api.media.mit.edu)
+![](chain_screen.png)
+
+---
+
+Open Source
+-----------
+
+[https://github.com/ssfrr/chain-api](https://github.com/ssfrr/chain-api)
+![](github_screen.png)
 
 Security
 --------
@@ -241,55 +321,3 @@ Security
 
 ---
 
-Ontology
---------
-
----
-
-![](resource_relations.svg)
-
-<div class="notes">
-* shared vocabulary is necessary for nice querying
-* Probably not necessary to tie in to Upper Ontology
-* Need vocab for relation types, data types
-* HAL gives nice way to tie relations to URLs to identify and describe
-* some (esp. search engines) are already using Schema.org data types
-</div>
-
----
-
-## Chain API
-
----
-
-![](scope2.svg)
-
-<div class="notes">
-* 366 devices in the system using a variety of protocols
-* 1121 separate sensors
-* Over 100,000,000 measurements over about 6 months
-* at least 6 applications (2x unity, 2x glass, javascript web, SOOFA)
-* common protocols are a lot easier in unique or niche environments
-</div>
-
-
-Streaming
----------
-
----
-
-![](streaming.svg)
-
----
-
-Open Source
------------
-
-[https://github.com/ssfrr/chain-api](https://github.com/ssfrr/chain-api)
-![](github_screen.png)
-
-Live
-----
-
-[http://chain-api.media.mit.edu](http://chain-api.media.mit.edu)
-![](chain_screen.png)

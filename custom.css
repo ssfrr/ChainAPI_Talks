@@ -8,6 +8,12 @@
     padding:0px;
 }
 
+/* highlight.js overrides */
+.hljs {
+    padding: 0px;
+    background: none;
+}
+
 .reveal h1 {
     font-size: 3.0em;
     line-height: 1.2em;
@@ -30,7 +36,7 @@
 }
 
 .dim {
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
 #notes {

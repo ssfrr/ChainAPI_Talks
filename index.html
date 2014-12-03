@@ -8,6 +8,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
     <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
     <link rel="stylesheet" href="custom.css"/>
@@ -31,8 +32,8 @@
 <h3 id="mit-media-lab">MIT Media Lab</h3>
 <h3 id="responsive-environments-group">Responsive Environments Group</h3>
 </section>
-<section id="vision" class="slide level2">
-<h1>Vision</h1>
+<section id="big-picture" class="slide level2">
+<h1>Big Picture</h1>
 <aside class="notes">
 <ul>
 <li>global scale</li>
@@ -44,9 +45,61 @@
 </section>
 <section class="slide level2">
 
+<h3 id="low-level-protocol-diversity">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture">Layered Architecture</h3>
+<h3 id="hyperlinks">Hyperlinks</h3>
+<h3 id="shared-vocabularies">Shared Vocabularies</h3>
+<h3 id="semantic-relations">Semantic Relations</h3>
+<h3 id="familiar-standards-minimal-tooling">Familiar Standards, Minimal Tooling</h3>
+<h3 id="pubsub">Pub/Sub</h3>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-1">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-1" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-1" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-1" class="dim">Shared Vocabularies</h3>
+<h3 id="semantic-relations-1" class="dim">Semantic Relations</h3>
+<h3 id="familiar-standards-minimal-tooling-1" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="pubsub-1" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>Assume a plurality of low-level device protocols</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
 <figure>
 <img src="vision_1.svg" />
 </figure>
+<aside class="notes">
+<ul>
+<li>abstract them from clients</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="vision_2.svg" />
+</figure>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-2" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-2">Layered Architecture</h3>
+<h3 id="hyperlinks-2" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-2" class="dim">Shared Vocabularies</h3>
+<h3 id="semantic-relations-2" class="dim">Semantic Relations</h3>
+<h3 id="familiar-standards-minimal-tooling-2" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="pubsub-2" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>allowing intermediaries</li>
+<li>handle caching, authentication, and encryption</li>
+</ul>
+</aside>
 </section>
 <section class="slide level2">
 
@@ -74,57 +127,7 @@
 <li>so this is in many ways what is common now</li>
 <li>app servers not speaking same language</li>
 <li>no standard way for them to connect to each other</li>
-</ul>
-</aside>
-</section>
-<section class="slide level2">
-
-<img src="vision_6.svg" />
-<aside class="notes">
-<ul>
-<li>layered architecture, less scaling on massive connection loads and keepalive</li>
-</ul>
-</aside>
-</section>
-<section class="slide level2">
-
-<h3 id="low-level-protocol-diversity">Low-Level Protocol Diversity</h3>
-<h3 id="layered-architecture">Layered Architecture</h3>
-<h3 id="hyperlinks">Hyperlinks</h3>
-<h3 id="shared-vocabularies">Shared Vocabularies</h3>
-<h3 id="familiar-standards-minimal-tooling">Familiar Standards, Minimal Tooling</h3>
-<h3 id="semantic-relations">Semantic Relations</h3>
-<h3 id="pubsub">Pub/Sub</h3>
-</section>
-<section class="slide level2">
-
-<h3 id="low-level-protocol-diversity-1">Low-Level Protocol Diversity</h3>
-<h3 id="layered-architecture-1" class="dim">Layered Architecture</h3>
-<h3 id="hyperlinks-1" class="dim">Hyperlinks</h3>
-<h3 id="shared-vocabularies-1" class="dim">Shared Vocabularies</h3>
-<h3 id="familiar-standards-minimal-tooling-1" class="dim">Familiar Standards, Minimal Tooling</h3>
-<h3 id="semantic-relations-1" class="dim">Semantic Relations</h3>
-<h3 id="pubsub-1" class="dim">Pub/Sub</h3>
-<aside class="notes">
-<ul>
-<li>Assume a plurality of low-level device protocols</li>
-<li>abstract them from clients</li>
-</ul>
-</aside>
-</section>
-<section class="slide level2">
-
-<h3 id="low-level-protocol-diversity-2" class="dim">Low-Level Protocol Diversity</h3>
-<h3 id="layered-architecture-2">Layered Architecture</h3>
-<h3 id="hyperlinks-2" class="dim">Hyperlinks</h3>
-<h3 id="shared-vocabularies-2" class="dim">Shared Vocabularies</h3>
-<h3 id="familiar-standards-minimal-tooling-2" class="dim">Familiar Standards, Minimal Tooling</h3>
-<h3 id="semantic-relations-2" class="dim">Semantic Relations</h3>
-<h3 id="pubsub-2" class="dim">Pub/Sub</h3>
-<aside class="notes">
-<ul>
-<li>allowing intermediaries</li>
-<li>handle caching, authentication, and encryption</li>
+<li>still better because of the layers</li>
 </ul>
 </aside>
 </section>
@@ -134,98 +137,24 @@
 <h3 id="layered-architecture-3" class="dim">Layered Architecture</h3>
 <h3 id="hyperlinks-3">Hyperlinks</h3>
 <h3 id="shared-vocabularies-3" class="dim">Shared Vocabularies</h3>
-<h3 id="familiar-standards-minimal-tooling-3" class="dim">Familiar Standards, Minimal Tooling</h3>
 <h3 id="semantic-relations-3" class="dim">Semantic Relations</h3>
+<h3 id="familiar-standards-minimal-tooling-3" class="dim">Familiar Standards, Minimal Tooling</h3>
 <h3 id="pubsub-3" class="dim">Pub/Sub</h3>
 <aside class="notes">
 <ul>
-<li>present resource relations and client affordances</li>
+<li>present resource relations</li>
+<li>affordances(creating a device, sending a command)</li>
+<li>currently using JSON-HAL, but JSON-LD looks nice as well</li>
+<li>Going to spend a little time here, as it's important!</li>
 </ul>
 </aside>
 </section>
 <section class="slide level2">
 
-<h3 id="low-level-protocol-diversity-4" class="dim">Low-Level Protocol Diversity</h3>
-<h3 id="layered-architecture-4" class="dim">Layered Architecture</h3>
-<h3 id="hyperlinks-4" class="dim">Hyperlinks</h3>
-<h3 id="shared-vocabularies-4">Shared Vocabularies</h3>
-<h3 id="familiar-standards-minimal-tooling-4" class="dim">Familiar Standards, Minimal Tooling</h3>
-<h3 id="semantic-relations-4" class="dim">Semantic Relations</h3>
-<h3 id="pubsub-4" class="dim">Pub/Sub</h3>
+<img src="vision_5.svg" />
 <aside class="notes">
 <ul>
-<li>Support interoperability via shared vocabularies</li>
-<li>terms identified with URIs</li>
-</ul>
-</aside>
-</section>
-<section class="slide level2">
-
-<h3 id="low-level-protocol-diversity-5" class="dim">Low-Level Protocol Diversity</h3>
-<h3 id="layered-architecture-5" class="dim">Layered Architecture</h3>
-<h3 id="hyperlinks-5" class="dim">Hyperlinks</h3>
-<h3 id="shared-vocabularies-5" class="dim">Shared Vocabularies</h3>
-<h3 id="familiar-standards-minimal-tooling-5">Familiar Standards, Minimal Tooling</h3>
-<h3 id="semantic-relations-5" class="dim">Semantic Relations</h3>
-<h3 id="pubsub-5" class="dim">Pub/Sub</h3>
-<aside class="notes">
-<ul>
-<li>use familiar standards (HTTP, JSON, and WebSockets)</li>
-<li>no specialized tooling or libraries</li>
-</ul>
-</aside>
-</section>
-<section class="slide level2">
-
-<h3 id="low-level-protocol-diversity-6" class="dim">Low-Level Protocol Diversity</h3>
-<h3 id="layered-architecture-6" class="dim">Layered Architecture</h3>
-<h3 id="hyperlinks-6" class="dim">Hyperlinks</h3>
-<h3 id="shared-vocabularies-6" class="dim">Shared Vocabularies</h3>
-<h3 id="familiar-standards-minimal-tooling-6" class="dim">Familiar Standards, Minimal Tooling</h3>
-<h3 id="semantic-relations-6">Semantic Relations</h3>
-<h3 id="pubsub-6" class="dim">Pub/Sub</h3>
-<aside class="notes">
-<ul>
-<li>Provide semantic relationships</li>
-<li>don't require full Semantic Web buy-in from developers</li>
-</ul>
-</aside>
-</section>
-<section class="slide level2">
-
-<h3 id="low-level-protocol-diversity-7" class="dim">Low-Level Protocol Diversity</h3>
-<h3 id="layered-architecture-7" class="dim">Layered Architecture</h3>
-<h3 id="hyperlinks-7" class="dim">Hyperlinks</h3>
-<h3 id="shared-vocabularies-7" class="dim">Shared Vocabularies</h3>
-<h3 id="familiar-standards-minimal-tooling-7" class="dim">Familiar Standards, Minimal Tooling</h3>
-<h3 id="semantic-relations-7" class="dim">Semantic Relations</h3>
-<h3 id="pubsub-7">Pub/Sub</h3>
-<aside class="notes">
-<ul>
-<li>allow clients to subscribe to push updates</li>
-</ul>
-</aside>
-</section>
-<section id="link-oriented" class="slide level2">
-<h1>Link Oriented</h1>
-<aside class="notes">
-<ul>
-<li>Links represent possible actions the client can take
-<ul>
-<li>Creating a device</li>
-<li>Sending a command</li>
-</ul></li>
-<li>Hypermedia, like the web, MESSY</li>
-<li>Built on json+hal</li>
-</ul>
-</aside>
-</section>
-<section class="slide level2">
-
-<img src="resource_relations.svg" />
-<aside class="notes">
-<ul>
-<li>Lets take a look back at our high-level architecture</li>
+<li>now with hyperlinks</li>
 </ul>
 </aside>
 </section>
@@ -280,9 +209,166 @@
 </section>
 <section class="slide level2">
 
-<figure>
 <img src="search_6.svg" />
+<aside class="notes">
+<ul>
+<li>now that we have all these links, what do they mean?...</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-4" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-4" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-4" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-4">Shared Vocabularies</h3>
+<h3 id="semantic-relations-4" class="dim">Semantic Relations</h3>
+<h3 id="familiar-standards-minimal-tooling-4" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="pubsub-4" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>Support interoperability via shared vocabularies</li>
+<li>specifically focus on vocabulary of relation names and data types</li>
+<li>terms identified with URIs</li>
+<li>lightweight to extend</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="resource_relations.svg" />
 </figure>
+<aside class="notes">
+<ul>
+<li>Need vocab for relation types, data types</li>
+<li>HAL gives nice way to tie relations to URLs to identify and describe</li>
+<li>some (esp. search engines) are already using Schema.org data types</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-5" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-5" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-5" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-5" class="dim">Shared Vocabularies</h3>
+<h3 id="semantic-relations-5">Semantic Relations</h3>
+<h3 id="familiar-standards-minimal-tooling-5" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="pubsub-5" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>enabled by hyperlinks and shared vocabulary</li>
+<li>Provide semantic relationships</li>
+<li>Probably not necessary to tie in to Upper Ontology</li>
+<li>don't require full Semantic Web buy-in from developers</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-6" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-6" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-6" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-6" class="dim">Shared Vocabularies</h3>
+<h3 id="semantic-relations-6" class="dim">Semantic Relations</h3>
+<h3 id="familiar-standards-minimal-tooling-6">Familiar Standards, Minimal Tooling</h3>
+<h3 id="pubsub-6" class="dim">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>use familiar standards (HTTP, JSON, and WebSockets)</li>
+<li>no specialized tooling or libraries</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<pre><code>{
+    &quot;firstName&quot;: &quot;Spencer&quot;,
+    &quot;lastName&quot;: &quot;Russell&quot;
+}</code></pre>
+<aside class="notes">
+<ul>
+<li>raw JSON doesn't give us QUITE enough</li>
+<li>we still need hyperlinks and shared vocabulary</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<pre><code>{
+    &quot;_links&quot;: {
+        &quot;self&quot;: { &quot;href&quot;: &quot;/api/user/837&quot; },
+        &quot;address&quot;: { &quot;href&quot;: &quot;/api/address/938&quot; }
+    },
+    &quot;firstName&quot;: &quot;Spencer&quot;,
+    &quot;lastName&quot;: &quot;Russell&quot;
+}</code></pre>
+<aside class="notes">
+<ul>
+<li>just JSON with links</li>
+<li>has a mechanism for the relation name to be a URL, but I won't go into it here</li>
+<li>this gives us everything we need</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<h3 id="low-level-protocol-diversity-7" class="dim">Low-Level Protocol Diversity</h3>
+<h3 id="layered-architecture-7" class="dim">Layered Architecture</h3>
+<h3 id="hyperlinks-7" class="dim">Hyperlinks</h3>
+<h3 id="shared-vocabularies-7" class="dim">Shared Vocabularies</h3>
+<h3 id="semantic-relations-7" class="dim">Semantic Relations</h3>
+<h3 id="familiar-standards-minimal-tooling-7" class="dim">Familiar Standards, Minimal Tooling</h3>
+<h3 id="pubsub-7">Pub/Sub</h3>
+<aside class="notes">
+<ul>
+<li>allow clients to subscribe to push updates</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="streaming.svg" />
+</figure>
+<aside class="notes">
+<ul>
+<li>use links to tell clients when streams are available</li>
+</ul>
+</aside>
+</section>
+<section id="implementation" class="slide level2">
+<h1>Implementation</h1>
+<aside class="notes">
+<ul>
+<li>reference implementation is in progress, but in use now</li>
+<li>basically everything except the shared vocabularies</li>
+</ul>
+</aside>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="scope2.svg" />
+</figure>
+<aside class="notes">
+<ul>
+<li>490 devices in the system using a variety of protocols</li>
+<li>2257 separate sensors</li>
+<li>Over 240,000,000 measurements</li>
+<li>at least 6 applications (2x unity, 2x glass, javascript web, SOOFA)</li>
+<li>common protocols are a lot easier in unique or niche environments (e.g. Unity)</li>
+</ul>
+</aside>
+</section>
+<section id="live" class="slide level2">
+<h1>Live</h1>
+<p><a href="http://chain-api.media.mit.edu">http://chain-api.media.mit.edu</a> <img src="chain_screen.png" /></p>
+</section>
+<section id="open-source" class="slide level2">
+<h1>Open Source</h1>
+<p><a href="https://github.com/ssfrr/chain-api">https://github.com/ssfrr/chain-api</a> <img src="github_screen.png" /></p>
 </section>
 <section id="security" class="slide level2">
 <h1>Security</h1>
@@ -299,58 +385,8 @@
 <img src="Heartbleed_Nightmare.jpg" alt="image from http://www.noip.com/" /><figcaption>image from http://www.noip.com/</figcaption>
 </figure>
 </section>
-<section id="ontology" class="slide level2">
-<h1>Ontology</h1>
-</section>
 <section class="slide level2">
 
-<figure>
-<img src="resource_relations.svg" />
-</figure>
-<aside class="notes">
-<ul>
-<li>shared vocabulary is necessary for nice querying</li>
-<li>Probably not necessary to tie in to Upper Ontology</li>
-<li>Need vocab for relation types, data types</li>
-<li>HAL gives nice way to tie relations to URLs to identify and describe</li>
-<li>some (esp. search engines) are already using Schema.org data types</li>
-</ul>
-</aside>
-</section>
-<section id="chain-api" class="slide level2">
-<h1>Chain API</h1>
-</section>
-<section class="slide level2">
-
-<figure>
-<img src="scope2.svg" />
-</figure>
-<aside class="notes">
-<ul>
-<li>366 devices in the system using a variety of protocols</li>
-<li>1121 separate sensors</li>
-<li>Over 100,000,000 measurements over about 6 months</li>
-<li>at least 6 applications (2x unity, 2x glass, javascript web, SOOFA)</li>
-<li>common protocols are a lot easier in unique or niche environments</li>
-</ul>
-</aside>
-</section>
-<section id="streaming" class="slide level2">
-<h1>Streaming</h1>
-</section>
-<section class="slide level2">
-
-<figure>
-<img src="streaming.svg" />
-</figure>
-</section>
-<section id="open-source" class="slide level2">
-<h1>Open Source</h1>
-<p><a href="https://github.com/ssfrr/chain-api">https://github.com/ssfrr/chain-api</a> <img src="github_screen.png" /></p>
-</section>
-<section id="live" class="slide level2">
-<h1>Live</h1>
-<p><a href="http://chain-api.media.mit.edu">http://chain-api.media.mit.edu</a> <img src="chain_screen.png" /></p>
 </section>
     </div>
   </div>
@@ -376,9 +412,10 @@
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
           { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 //          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
 //          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-]});
+      ]});
     </script>
   </body>
 </html>
