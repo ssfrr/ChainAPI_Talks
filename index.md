@@ -284,10 +284,21 @@
 ![](scope2.svg)
 
 <div class="notes">
-* 490 devices in the system using a variety of protocols
-* 2257 separate sensors
-* Over 240,000,000 measurements
-* at least 6 applications (2x unity, 2x glass, javascript web, SOOFA)
+* python
+* django and flask
+* postgres
+</div>
+
+---
+
+### 490 Devices
+### 2257 Sensors
+### Over 240,000,000 measurements
+### 6 applications
+
+<div class="notes">
+* devices using a variety of protocols
+* applications: (2x unity, 2x glass, javascript web, SOOFA)
 * common protocols are a lot easier in unique or niche environments (e.g. Unity)
 </div>
 
@@ -306,6 +317,11 @@ Open Source
 
 [https://github.com/ssfrr/chain-api](https://github.com/ssfrr/chain-api)
 ![](github_screen.png)
+
+## Spencer Russell
+### sfr@media.mit.edu
+### @ssfrr
+### github.com/ssfrr
 
 Security
 --------
